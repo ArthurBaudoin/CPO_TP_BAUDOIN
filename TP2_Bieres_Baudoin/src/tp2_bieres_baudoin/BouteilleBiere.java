@@ -9,5 +9,9 @@ package tp2_bieres_baudoin;
  * @author arthu
  */
 public class BouteilleBiere {
+    string nom;
+    double degreAlcool;
+    string brsserie;
+    boolean ouverte;
     
 }
