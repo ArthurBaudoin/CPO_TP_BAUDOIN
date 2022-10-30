@@ -26,4 +26,21 @@ public BouteilleBiere(String unNom, double unDegre, String uneBrasserie) { //con
         ouverte = false;
                 
        
-                }}
+                }
+
+  public boolean Decapsuler() {                      // méthode qui permet de décapsuler unebière  
+        if (ouverte == false) {                     // et de nous indiquer ci c'est déjà le cas 
+            ouverte = true; 
+            System.out.println(" bière décapsulée \n");
+            return true;
+        }
+        else {
+            System.out.println(" erreur : biere déjà ouverte \n");
+            return false;
+                    }
+
+
+
+
+
+} }

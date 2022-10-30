@@ -18,9 +18,23 @@ public class TP2_Bieres_Baudoin {
         
         BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", 7.0 ,"Dubuisson") ;
         uneBiere.lireEtiquette();
+        uneBiere.Decapsuler();
 
         BouteilleBiere autreBiere = new BouteilleBiere ("Leffe", 6.6 ,"Abbaye de Leffe");
-        autreBierre.lireetiquette();
+        autreBiere.lireEtiquette();
+        autreBiere.Decapsuler();
+        
+        BouteilleBiere troisBiere = new BouteilleBiere ("Tripel Karmeliet", 8.4 ,"Brasserie Bosteels");
+        troisBiere.lireEtiquette();
+        troisBiere.Decapsuler();
+        
+        BouteilleBiere quatreBiere = new BouteilleBiere ("Kwak", 8.4 ,"Brasserie Bosteels");
+        quatreBiere.lireEtiquette();
+        quatreBiere.Decapsuler();
+        
+        BouteilleBiere cinqBiere = new BouteilleBiere("Rince Cochon", 8.5 ,"Haacht");
+        cinqBiere.lireEtiquette();
+        cinqBiere.Decapsuler();
 
         
     }
