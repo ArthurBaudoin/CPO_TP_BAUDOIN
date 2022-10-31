@@ -19,9 +19,16 @@ public class TP2_manip_BAUDOIN {
         Tartiflette assiette2 = new Tartiflette(600) ;
         Tartiflette assiette3 = assiette2 ;
         
+        System.out.println("nb de calories de Assiette 1 : " +assiette1.nbcalories) ;
         System.out.println("nb de calories de Assiette 2 : " +assiette2.nbcalories) ;
         System.out.println("nb de calories de Assiette 3 : " +assiette3.nbcalories) ;
         
+        assiette3.changer_cal(460);
+        
+        System.out.println("nb de calories de l'assiette2 avec modif assiette3 :"
+        + assiette2.nbcalories);
+        System.out.println("nb de calories de l'assiette3 avec modif assiette3 :"
+        + assiette3.nbcalories);
         
         
     }
