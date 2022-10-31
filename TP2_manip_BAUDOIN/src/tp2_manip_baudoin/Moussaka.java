@@ -9,5 +9,10 @@ package tp2_manip_baudoin;
  * @author arthu
  */
 public class Moussaka {
+    int nbcalories;
+    
+    public Moussaka(int caloriesDep){
+        nbcalories = caloriesDep;
+    }
     
 }

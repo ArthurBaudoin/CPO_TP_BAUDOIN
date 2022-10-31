@@ -9,5 +9,12 @@ package tp2_manip_baudoin;
  * @author arthu
  */
 public class Tartiflette {
+    int nbcalories;
+    
+    public Tartiflette(int caloriesDep){
+        nbcalories = caloriesDep;
+    }
+    
+    
     
 }
