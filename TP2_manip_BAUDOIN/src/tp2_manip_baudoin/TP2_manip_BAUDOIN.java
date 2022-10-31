@@ -30,6 +30,18 @@ public class TP2_manip_BAUDOIN {
         System.out.println("nb de calories de l'assiette3 avec modif assiette3 :"
         + assiette3.nbcalories);
         
+        //cela designe bien le même objet car quand on modifie a3, a2 change elle
+        //elle aussi de valeur
+        
+        assiette2 = assiette1;
+        assiette1 = assiette3; // Etant donner que 2 et 3 désigne le même objet
+        // 1 et 2 ont donc été intervertie
+        
+        
+    
+                               
+        
+        
         
     }
     

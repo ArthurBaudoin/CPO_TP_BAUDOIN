@@ -15,6 +15,9 @@ public class Tartiflette {
         nbcalories = caloriesDep;
     }
     
-    
+    public int changer_cal(int caloriesFin) {
+        nbcalories = caloriesFin;
+        return nbcalories;
+    }
     
 }
