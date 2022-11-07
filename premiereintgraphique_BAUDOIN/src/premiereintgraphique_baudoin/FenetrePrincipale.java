@@ -17,6 +17,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         initComponents();
         System.out.println("fenetre crée");
         msg_bienvenue.setText("Bonjour le monde");
+        jl_résultat.setVisible(false);
     }
 
     /**
@@ -31,6 +32,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         msg_bienvenue = new javax.swing.JLabel();
         msg_fin = new javax.swing.JLabel();
         BoutonValider = new javax.swing.JButton();
+        zonenom = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jl_résultat = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        boutton_augmenter = new javax.swing.JButton();
+        zone_salaire = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,31 +52,82 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             }
         });
 
+        zonenom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                zonenomActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Entrez votre Prénom");
+
+        jl_résultat.setText("Résultat :");
+
+        jLabel2.setText("Entrez votre salaire");
+
+        boutton_augmenter.setText("Augmentez votre salaire");
+        boutton_augmenter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boutton_augmenterActionPerformed(evt);
+            }
+        });
+
+        zone_salaire.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                zone_salaireActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(msg_bienvenue)
-                .addGap(109, 109, 109))
             .addGroup(layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BoutonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(msg_fin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(130, 130, 130)
+                                .addComponent(boutton_augmenter))
+                            .addComponent(msg_bienvenue)
+                            .addComponent(msg_fin, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(zone_salaire, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(38, 38, 38)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(zonenom, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(105, 105, 105)
+                                    .addComponent(jl_résultat, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(32, 32, 32)
+                        .addComponent(BoutonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(81, 81, 81)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(zonenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(BoutonValider))
+                .addGap(18, 18, 18)
+                .addComponent(jl_résultat)
+                .addGap(22, 22, 22)
                 .addComponent(msg_bienvenue)
-                .addGap(31, 31, 31)
-                .addComponent(BoutonValider)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(msg_fin)
-                .addGap(88, 88, 88))
+                .addGap(66, 66, 66)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(boutton_augmenter)
+                    .addComponent(zone_salaire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,7 +136,26 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private void BoutonValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonValiderActionPerformed
         // TODO add your handling code here:
         msg_fin.setText("au revoir en français");
+        String a = zonenom.getText();
+        jl_résultat.setText("Bonjour "+a);
+        jl_résultat.setVisible(true);
     }//GEN-LAST:event_BoutonValiderActionPerformed
+
+    private void zonenomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zonenomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_zonenomActionPerformed
+
+    private void boutton_augmenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutton_augmenterActionPerformed
+        // TODO add your handling code here:
+        String salaire = zone_salaire.getText();
+        int salaire_entier = Integer.parseInt(salaire);
+        salaire_entier++; //j'augmete de 1 
+        zone_salaire.setText(salaire_entier+"");
+    }//GEN-LAST:event_boutton_augmenterActionPerformed
+
+    private void zone_salaireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zone_salaireActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_zone_salaireActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,7 +194,13 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BoutonValider;
+    private javax.swing.JButton boutton_augmenter;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jl_résultat;
     private javax.swing.JLabel msg_bienvenue;
     private javax.swing.JLabel msg_fin;
+    private javax.swing.JTextField zone_salaire;
+    private javax.swing.JTextField zonenom;
     // End of variables declaration//GEN-END:variables
 }
