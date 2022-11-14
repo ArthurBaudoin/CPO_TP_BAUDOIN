@@ -4,6 +4,9 @@
  */
 package tp3_baudoin;
 
+import Armes.Arme;
+import Armes.Baton;
+import Armes.Epee;
 import java.util.Vector;
 
 /**
@@ -17,10 +20,10 @@ public class TP3_BAUDOIN {
      */
     public static void main(String[] args) {
 
-        Arme Sword1 = new Epee("Excalibur", 7.5);
-        Arme Sword2 = new Epee("Durandal", 4.7);
-        Arme Stick1 = new Baton("Chêne", 4.5);
-        Arme Stick2 = new Baton("Charme", 5.6);
+        Arme Sword1 = new Epee("Excalibur", 7,5);
+        Arme Sword2 = new Epee("Durandal", 4,7);
+        Arme Stick1 = new Baton("Chêne", 4,5);
+        Arme Stick2 = new Baton("Charme", 5,6);
 
         Vector tab_dyn = new Vector();
         tab_dyn.add(Sword1);

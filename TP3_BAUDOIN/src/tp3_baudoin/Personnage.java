@@ -10,14 +10,14 @@ package tp3_baudoin;
  */
 public class Personnage {
     String nom;
-    double niv_vie;
+    int niv_vie;
     
-public Personnage (String nom, double niv_vie){
+public Personnage (String nom, int niv_vie){
     this.niv_vie = niv_vie;
     this.nom = nom;
 }
 
-public double connaitre_niv_vie (){
+public int connaitre_niv_vie (){
     return niv_vie;
 }
 
