@@ -4,6 +4,9 @@
  */
 package tp3_baudoin;
 
+import Personnages.Personnage;
+import Personnages.Magicien;
+import Personnages.Guerrier;
 import Armes.Arme;
 import Armes.Baton;
 import Armes.Epee;
@@ -38,15 +41,22 @@ public class TP3_BAUDOIN {
         Personnage Mag2 = new Magicien("Garcimore", 44, false);
         Personnage War1 = new Guerrier("Conan", 78, false);
         Personnage War2 = new Guerrier("Lannister", 45, true);
-        
+
         Vector tab_perso = new Vector();
         tab_perso.add(Mag1);
         tab_perso.add(Mag2);
         tab_perso.add(War1);
         tab_perso.add(War2);
-        
+
         for (int i = 0; i < tab_dyn.size(); i++) {
             System.out.println(tab_perso.elementAt(i));
         }
+
+        Mag1.ajouter_arme(Sword2);
+        Mag1.ajouter_arme(Sword1);
+        Mag1.ajouter_arme(Sword2);
+        Mag1.ajouter_arme(Sword2);
+        System.out.println("ajout de la 5eme arme? "+Mag1.ajouter_arme(Sword2));
+        System.out.println("ajout de la 6eme arme? "+Mag1.ajouter_arme(Sword1));
     }
 }
